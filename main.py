@@ -82,12 +82,16 @@ def input_name(prompt):
 # =========================================
 
 def ask_to_continue():
-    answer = input("\nReturn to menu? (yes/no): ").strip().lower()
+    while True:
+        answer = input("\nReturn to menu? (yes/no): ").strip().lower()
 
-    if answer == "no":
-        print("Goodbye!")
-        return False
-    return True
+        if answer == "yes":
+            return True
+        elif answer == "no":
+            print("Goodbye!")
+            return False
+        else:
+            print("Invalid option. Please type 'yes' or 'no'.")
 
 
 # =========================================
