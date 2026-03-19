@@ -2,6 +2,7 @@ from clients import register_client, view_clients
 from products import register_product, view_products
 from orders import create_order, view_orders, calculate_income
 from reports import generate_report
+from validationfunct import input_int, input_float,input_string,input_name
 
 clients = {}
 products = {}
@@ -10,7 +11,7 @@ orders = {}
 # =========================================
 # VALIDATION FUNCTIONS
 # =========================================
-
+"""
 def input_int(prompt):
     while True:
         value = input(prompt).strip()
@@ -55,20 +56,6 @@ def input_float(prompt):
 
         return number
 
-
-"""def input_float(prompt):
-    while True:
-        value = input(prompt).strip()
-        try:
-            number = float(value)
-            if number > 0:
-                return number
-            else:
-                print("Value must be greater than 0.")
-        except:
-            print("Invalid input. Please enter a valid number.")"""
-
-
 def input_string(prompt):
     while True:
         value = input(prompt).strip()
@@ -78,9 +65,9 @@ def input_string(prompt):
 
 
 def input_name(prompt):
-    """
-    Only allows letters and spaces
-    """
+    
+    #Only allows letters and spaces
+    
     while True:
         value = input(prompt).strip()
 
@@ -88,7 +75,7 @@ def input_name(prompt):
             return value.title()
         else:
             print("Invalid name. Only letters are allowed.")
-
+"""
 
 # =========================================
 # CONTINUE FUNCTION
